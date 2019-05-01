@@ -16,7 +16,8 @@
     "license": "MIT",
     "version":"0.1",
     "require":{
-        "php":">=7.0"
+        "php":">=7.0",
+        "guzzlehttp/guzzle": "^6.3"
     },
     
     "autoload":{
