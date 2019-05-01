@@ -21,7 +21,7 @@
     
     "autoload":{
         "psr-0":{
-            "gan4x4\\Market" : "src"
+            "Gan4x4\\FMB" : "src"
         }
     }
 }

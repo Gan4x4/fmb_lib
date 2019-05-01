@@ -1,6 +1,6 @@
 <?php
 
-namespace Gan4x4\FMB;
+namespace Gan4x4\Fmb;
 
 
 trait ImageTrait {
