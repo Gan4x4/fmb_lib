@@ -47,6 +47,20 @@ trait ImageTrait {
         return storage_path('app/public'.DIRECTORY_SEPARATOR.config('constants.image_path').DIRECTORY_SEPARATOR.$this->filename);
     }
     
+    public static function hashFunction($path){
+        return md5_file($path);
+    }
+    
+    // Override
+    public function save(array $options = array()){
+        $size = getimagesize($this->path());
+        $this->width = $size[0];
+        $this->height = $size[1];
+        $this->hash = self::hashFunction($this->path());
+        parent::save($options);
+    }
+    
+    
 }
 
 
