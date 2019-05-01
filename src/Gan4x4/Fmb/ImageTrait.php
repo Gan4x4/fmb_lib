@@ -4,8 +4,12 @@ namespace Gan4x4\Fmb;
 
 use Intervention\Image\ImageManager;
 use Intervention\Image\ImageManagerStatic;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Http\File;
 
 trait ImageTrait {
+    
+    public $thumb_dir = "thumb";
     
     public function url(){
         return asset('storage'.DIRECTORY_SEPARATOR.config('constants.image_path').DIRECTORY_SEPARATOR.$this->filename);
@@ -51,8 +55,14 @@ trait ImageTrait {
         return md5_file($path);
     }
     
+    public static function findByHash($path){
+        $hash =  self::hashFunction($path);
+        return static::where('hash',$hash)->first();
+    }
+    
     // Override
     public function save(array $options = array()){
+        //dump($this->path());
         $size = getimagesize($this->path());
         $this->width = $size[0];
         $this->height = $size[1];
@@ -60,6 +70,16 @@ trait ImageTrait {
         parent::save($options);
     }
     
+    public function attachFile($filePath){
+        $file = new File($filePath);
+        $old_file = $this->path();
+        
+        //unlink($old_file);
+        $new_file_path = Storage::putFile('public'.DIRECTORY_SEPARATOR.config('constants.image_path'), $file);
+        $this->filename = basename($new_file_path);
+        $this->save();
+    }
+   
     
 }
 
