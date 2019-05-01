@@ -21,7 +21,7 @@
     
     "autoload":{
         "psr-0":{
-            "Gan4x4\\FMB" : "src"
+            "Gan4x4\\Fmb" : "src"
         }
     }
 }
