@@ -4,7 +4,6 @@
     "description": "Common code to all Find my bike related projects",
     "keywords": ["FMB","Find my bike"],
     "homepage": "https://findmybike.eu",
-    "license": "MIT",
     "authors": [
         {
             "name": "Anton Ganichev aka Gan4x4",
@@ -12,6 +11,13 @@
             "homepage": "http://gan4x4.ru",
             "role": "Developer"
         }
-    ]
+    ],   
+    
+    "license": "MIT",
+    "version":"0.1",
+    "require":{
+        "php":">=7.0"
+    }
+    
 }
 
