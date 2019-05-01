@@ -17,7 +17,12 @@
     "version":"0.1",
     "require":{
         "php":">=7.0"
-    }
+    },
     
+    "autoload":{
+        "psr-0":{
+            "gan4x4\\Market" : "src"
+        }
+    }
 }
 
