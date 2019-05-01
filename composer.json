@@ -1,0 +1,17 @@
+{
+    "name": "gan4x4/fmb-lib",
+    "type": "library",
+    "description": "Common code to all Find my bike related projects",
+    "keywords": ["FMB","Find my bike"],
+    "homepage": "https://findmybike.eu",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Anton Ganichev aka Gan4x4",
+            "email": "gan4x4@gmail.com",
+            "homepage": "http://gan4x4.ru",
+            "role": "Developer"
+        }
+    ]
+}
+
