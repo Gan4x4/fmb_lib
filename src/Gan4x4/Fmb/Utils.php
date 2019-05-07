@@ -15,7 +15,7 @@ class Utils{
             ];
     }
     
-     // Save Image from URL to local temp dir
+    // Save Image from URL to local temp dir
     public static function saveImage($url){
         
         if (strpos($url, "http:") === false){
